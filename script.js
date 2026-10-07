@@ -220,6 +220,7 @@ function updatePaymentFields() {
   const method = paymentMethodEl.value;
   const paymentInfo = {
     bKash: { number: '01799900886', hint: 'এই bKash নম্বরে Send Money করুন।' },
+    Nagad: { number: '01814026318', hint: 'এই Nagad নম্বরে Send Money করুন' },
     Rocket: { number: '01604985164', hint: 'এই Rocket নম্বরে Send Money করুন।' },
     Upay: { number: '01814026318', hint: 'এই Upay নম্বরে Send Money করুন।' }
   };
