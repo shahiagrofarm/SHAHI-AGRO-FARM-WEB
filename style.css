@@ -1398,213 +1398,45 @@ body[data-page="home"] .hero-photo-badge {
   .footer-social > span { text-align: right !important; }
 }
 
-/* =========================================================
-   HOME HERO — MODERN SIDE-BY-SIDE PRODUCT PRESENTATION
-   Keeps the existing two-photo 5-second slideshow, but moves
-   the product image to the side and adds useful farm details.
-   ========================================================= */
-body[data-page="home"] .hero-modern-layout {
-  grid-template-columns: minmax(0, 1.02fr) minmax(360px, .98fr) !important;
-  gap: clamp(38px, 6vw, 82px) !important;
-  align-items: center !important;
-  min-height: calc(100vh - 80px) !important;
-}
 
-body[data-page="home"] .hero-copy {
-  max-width: 650px !important;
-  padding: 24px 0 !important;
-  position: relative !important;
-  z-index: 3 !important;
-}
-
-body[data-page="home"] .hero-copy h1 {
-  font-size: clamp(3.4rem, 7.3vw, 6.5rem) !important;
-  line-height: .86 !important;
-  margin: 22px 0 18px !important;
-  letter-spacing: -.065em !important;
-}
-
-body[data-page="home"] .hero-description {
-  max-width: 590px !important;
-  margin: 0 !important;
-  font-size: clamp(.98rem, 1.5vw, 1.12rem) !important;
-  line-height: 1.7 !important;
-}
-
-body[data-page="home"] .hero-details {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 11px !important;
-  margin: 25px 0 13px !important;
-  max-width: 610px !important;
-}
-
-body[data-page="home"] .hero-detail-card {
-  min-height: 84px !important;
-  padding: 14px 13px !important;
-  border-radius: 18px !important;
-  border: 1px solid rgba(47,107,47,.15) !important;
-  background: rgba(255,255,255,.52) !important;
-  box-shadow: 0 12px 30px rgba(47,107,47,.08) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-}
-
-body[data-page="home"] .hero-detail-card strong {
-  display: block !important;
-  color: #2f6b2f !important;
-  font-size: .98rem !important;
-  line-height: 1.1 !important;
-  letter-spacing: .04em !important;
-}
-
-body[data-page="home"] .hero-detail-card span {
-  display: block !important;
-  margin-top: 5px !important;
-  color: #557056 !important;
-  font-size: .74rem !important;
-  line-height: 1.25 !important;
-  font-weight: 750 !important;
-}
-
-body[data-page="home"] .hero-mini-line {
-  display: flex !important;
-  align-items: center !important;
-  gap: 9px !important;
-  color: #365d36 !important;
-  font-size: .78rem !important;
-  font-weight: 800 !important;
-  letter-spacing: .015em !important;
-}
-
-body[data-page="home"] .hero-mini-line span {
-  width: 28px !important;
-  height: 3px !important;
-  border-radius: 999px !important;
-  background: #72b94b !important;
-  box-shadow: 0 0 14px rgba(114,185,75,.55) !important;
-  flex: 0 0 28px !important;
-}
-
-body[data-page="home"] .hero-side-photo {
-  min-height: 0 !important;
-  height: auto !important;
-  width: 100% !important;
-  display: block !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-body[data-page="home"] .hero-side-photo .hero-photo-stack {
-  width: 100% !important;
-  height: clamp(430px, 54vw, 560px) !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  border-radius: 34px !important;
-  overflow: hidden !important;
-  position: relative !important;
-  border: 1px solid rgba(255,255,255,.72) !important;
-  background: rgba(255,255,255,.18) !important;
-  box-shadow: 0 30px 75px rgba(31,83,38,.20) !important;
-  transform: rotate(1.2deg) !important;
-}
-
-body[data-page="home"] .hero-side-photo .hero-photo-slide {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-radius: 34px !important;
-  transform: scale(1.015) !important;
-  opacity: 0 !important;
-  z-index: 1 !important;
-  transition: opacity 1.4s ease-in-out, transform 5s ease-in-out !important;
-  filter: saturate(1.06) contrast(1.03) !important;
-}
-
-body[data-page="home"] .hero-side-photo .hero-photo-slide.is-active {
-  opacity: 1 !important;
-  z-index: 2 !important;
-  transform: scale(1) !important;
-}
-
-body[data-page="home"] .hero-side-photo .hero-photo-badge {
-  left: 8% !important;
-  bottom: 8% !important;
-  z-index: 6 !important;
-  padding: 15px 18px !important;
-  border-radius: 18px !important;
-  background: rgba(255,255,255,.84) !important;
-  box-shadow: 0 18px 40px rgba(22,70,31,.18) !important;
-}
-
-body[data-page="home"] .hero-photo-glow {
-  position: absolute !important;
-  inset: auto -10% -16% -10% !important;
-  height: 42% !important;
-  z-index: 4 !important;
-  pointer-events: none !important;
-  background: radial-gradient(ellipse at 50% 100%, rgba(185,239,103,.48), rgba(53,168,90,.08) 52%, transparent 74%) !important;
-  filter: blur(9px) !important;
-  animation: heroPhotoGlow 4.5s ease-in-out infinite !important;
-}
-
-body[data-page="home"] .hero-side-photo::before {
-  content: "" !important;
-  position: absolute !important;
-  width: 120px !important;
-  height: 120px !important;
-  right: -35px !important;
-  top: -35px !important;
-  z-index: 5 !important;
-  border-radius: 50% !important;
-  background: rgba(255,228,92,.24) !important;
-  filter: blur(5px) !important;
-  animation: heroPhotoOrb 5s ease-in-out infinite !important;
-}
-
-@keyframes heroPhotoGlow {
-  0%, 100% { opacity: .42; transform: translateY(5px) scale(.94); }
-  50% { opacity: .78; transform: translateY(-5px) scale(1.04); }
-}
-
-@keyframes heroPhotoOrb {
-  0%, 100% { transform: translate(0,0) scale(.9); opacity: .5; }
-  50% { transform: translate(-22px, 14px) scale(1.12); opacity: .85; }
-}
-
-body[data-theme="dark"] .hero-detail-card {
-  background: rgba(12,45,26,.56) !important;
-  border-color: rgba(196,232,190,.15) !important;
-}
-body[data-theme="dark"] .hero-detail-card strong { color: #d9f5bf !important; }
-body[data-theme="dark"] .hero-detail-card span,
-body[data-theme="dark"] .hero-mini-line { color: rgba(239,255,233,.78) !important; }
-
-@media (max-width: 900px) {
-  body[data-page="home"] .hero-modern-layout {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
-    min-height: 0 !important;
-  }
-  body[data-page="home"] .hero-copy { max-width: 720px !important; }
-  body[data-page="home"] .hero-side-photo { order: -1 !important; }
-  body[data-page="home"] .hero-side-photo .hero-photo-stack {
-    height: 430px !important;
-    transform: rotate(.6deg) !important;
-  }
-}
-
-@media (max-width: 560px) {
-  body[data-page="home"] .hero-copy h1 { font-size: 3.35rem !important; }
-  body[data-page="home"] .hero-details { gap: 8px !important; }
-  body[data-page="home"] .hero-detail-card { min-height: 76px !important; padding: 12px 9px !important; }
-  body[data-page="home"] .hero-detail-card strong { font-size: .82rem !important; }
-  body[data-page="home"] .hero-detail-card span { font-size: .66rem !important; }
-  body[data-page="home"] .hero-mini-line { font-size: .68rem !important; }
-  body[data-page="home"] .hero-side-photo .hero-photo-stack { height: 360px !important; }
-}
+/* SHAHI AGRO FARM — Emerald 3D Motion Upgrade (keeps existing page structure) */
+:root{--deep:#04150e;--deep2:#073d28;--green:#00d978;--mint:#b8ffd7;--lime:#9cff3c;--yellow:#d9ff6a;--ink:#eafff1;--muted:#a5c5b2;--line:rgba(83,255,165,.2);--shadow:0 24px 70px rgba(0,0,0,.42)}
+body[data-theme="dark"]{background:#030906;color:#eafff1}
+body[data-theme="dark"] .nav{background:rgba(3,15,9,.82);border-color:rgba(102,255,165,.22);box-shadow:0 12px 42px #0008}
+body[data-theme="dark"] .brand{color:#d8ffe6}
+body[data-theme="dark"] .navlinks a:hover,body[data-theme="dark"] .navlinks a.active{background:rgba(0,217,120,.16);color:#9cffc4}
+body[data-theme="dark"] .hero{background:radial-gradient(ellipse at 76% 20%,rgba(0,255,128,.24),transparent 31%),radial-gradient(ellipse at 12% 95%,rgba(35,148,75,.22),transparent 38%),linear-gradient(135deg,#020805 0%,#061b10 48%,#063d27 100%)}
+body[data-theme="dark"] .hero:before{background:radial-gradient(circle,rgba(0,255,128,.19),transparent 68%);filter:blur(10px)}
+body[data-theme="dark"] .hero h1 span{color:#effff5;text-shadow:0 0 30px rgba(0,255,128,.16)}
+body[data-theme="dark"] .hero p{color:#c6e9d3}
+body[data-theme="dark"] .kicker{color:#a5ffca;background:rgba(0,217,120,.12);border:1px solid rgba(0,255,128,.24)}
+body[data-theme="dark"] .navcta,body[data-theme="dark"] .btn{background:linear-gradient(120deg,#00a95e,#51ff9a);color:#02170b;box-shadow:0 10px 30px rgba(0,255,128,.2)}
+body[data-theme="dark"] .btn.alt{color:#eafff1;background:rgba(3,20,11,.5);border-color:rgba(131,255,177,.35)}
+body[data-theme="dark"] .section{background:linear-gradient(180deg,#050d08,#071a10)}
+body[data-theme="dark"] .section.altbg{background:linear-gradient(145deg,#06150c,#0b2616)}
+body[data-theme="dark"] .section.dark{background:linear-gradient(145deg,#020805,#063b24)}
+body[data-theme="dark"] .section-head h2,body[data-theme="dark"] .section h3,body[data-theme="dark"] .section p,body[data-theme="dark"] .section li{color:#e5ffed}
+body[data-theme="dark"] .card,body[data-theme="dark"] .benefit-card,body[data-theme="dark"] .contact-card,body[data-theme="dark"] .order-card{background:linear-gradient(145deg,rgba(11,38,22,.92),rgba(3,14,8,.96));border-color:rgba(98,255,159,.18);box-shadow:0 16px 42px rgba(0,0,0,.24)}
+body[data-theme="dark"] .visual{background:linear-gradient(145deg,rgba(13,72,39,.72),rgba(2,14,8,.76));border-color:rgba(119,255,169,.26);box-shadow:0 24px 65px rgba(0,0,0,.38),inset 0 0 35px rgba(0,255,128,.05)}
+body[data-theme="dark"] .grass-hero-visual{background:linear-gradient(145deg,rgba(8,48,27,.85),rgba(2,12,7,.92))!important}
+body[data-theme="dark"] .hero-photo{border-color:rgba(5,26,14,.88);box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 32px rgba(0,255,128,.14)}
+body[data-theme="dark"] .hero-photo-badge{background:rgba(2,18,9,.86);border:1px solid rgba(105,255,163,.3);color:#e8fff0;backdrop-filter:blur(18px)}
+body[data-theme="dark"] .settings-panel{background:rgba(3,17,9,.97);border-color:rgba(105,255,163,.25);color:#eafff1}
+body[data-theme="dark"] input,body[data-theme="dark"] select,body[data-theme="dark"] textarea{background:#06140b;color:#eafff1;border-color:#245a38}
+body[data-theme="dark"] footer{color:#a5c5b2}
+.hero-real-photo-mockup,.grass-hero-visual{perspective:1200px;transform-style:preserve-3d}
+.hero-photo-stack{transform-style:preserve-3d;animation:shahiSceneFloat 8s ease-in-out infinite}
+.hero-photo-main{transform:rotateY(-7deg) rotateX(2deg) rotateZ(2deg);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.hero-photo-small{transform:translateZ(48px) rotateY(8deg) rotateZ(-5deg);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.hero-photo-stack:hover .hero-photo-main{transform:translateZ(26px) rotateY(-2deg) rotateX(0) rotateZ(0)}
+.hero-photo-stack:hover .hero-photo-small{transform:translateZ(70px) rotateY(0) rotateZ(-2deg)}
+.silage-bag{transform-style:preserve-3d;filter:drop-shadow(0 30px 35px rgba(0,0,0,.32));animation:shahiBagFloat 5.4s ease-in-out infinite,shahiBagTurn 12s ease-in-out infinite}
+.grass-glow{mix-blend-mode:screen}
+body[data-theme="dark"] .grass-glow{background:radial-gradient(circle at 65% 25%,rgba(0,255,128,.28),transparent 34%),radial-gradient(circle at 25% 75%,rgba(128,255,49,.15),transparent 30%)}
+.card,.benefit-card,.contact-card,.order-card,.silage-photo-card{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;transform-style:preserve-3d}
+body[data-theme="dark"] .card:hover,body[data-theme="dark"] .benefit-card:hover,body[data-theme="dark"] .contact-card:hover,body[data-theme="dark"] .order-card:hover{transform:translateY(-7px) rotateX(1deg);box-shadow:0 24px 55px rgba(0,0,0,.34),0 0 24px rgba(0,255,128,.09);border-color:rgba(0,255,128,.42)}
+@keyframes shahiSceneFloat{0%,100%{transform:translateY(0) rotateX(0)}50%{transform:translateY(-9px) rotateX(1.3deg)}}
+@keyframes shahiBagFloat{0%,100%{translate:0 0}50%{translate:0 -13px}}
+@keyframes shahiBagTurn{0%,100%{rotate:0deg}50%{rotate:1.2deg}}
+@media(prefers-reduced-motion:reduce){.hero-photo-stack,.silage-bag,.grass-image,.grass-glow{animation:none!important;transition:none!important}.hero-photo-stack:hover .hero-photo-main,.hero-photo-stack:hover .hero-photo-small{transform:none}}
+@media(max-width:760px){.hero-photo-stack{animation-duration:10s}.hero-real-photo-mockup{min-height:330px}.hero-photo-stack{min-height:320px}.hero-photo-main{height:285px}.hero-photo-small{height:170px}.visual{min-height:360px}}
